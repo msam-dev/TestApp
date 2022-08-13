@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/texttitle"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="10dp"
+        android:text="Please enter your account information"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/enterUsernameLogin"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textSize="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/texttitle"
+    />
+
+    <EditText
+        android:id="@+id/enterPasswordLogin"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textSize="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/enterUsernameLogin"
+    />
+
+    <Button
+        android:id="@+id/userLoginButton"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:text="login as user"
+        android:textSize="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/enterPasswordLogin"
+
+        android:backgroundTint="#00BCD4"
+        />
+</RelativeLayout>

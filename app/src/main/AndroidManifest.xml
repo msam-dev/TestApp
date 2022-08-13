@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.TestApp" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher2_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SelectiveHighSchoolPreparationTest" >
+
+        <activity
+            android:name="com.example.TestApp.home_activity"
+            android:exported="false"
+            android:parentActivityName="com.example.TestApp.MainActivity"/>
+
+        <activity
+            android:name="com.example.TestApp.login_page"
+            android:exported="false"
+            android:parentActivityName="com.example.TestApp.home_activity"/>
+
+        <activity
+            android:name="com.example.TestApp.register_page"
+            android:exported="false"
+            android:parentActivityName="com.example.TestApp.home_activity"/>
+
+        <activity
+            android:name="com.example.TestApp.main_quiz_page"
+            android:exported="false"
+            android:parentActivityName="com.example.TestApp.home_activity"/>
+
+        <activity
+            android:name="com.example.TestApp.tutorial"
+            android:exported="false"
+            android:parentActivityName="com.example.TestApp.main_quiz_page"/>
+
+        <activity
+            android:name="com.example.TestApp.mathematical_reasoning"
+            android:exported="false"
+            android:parentActivityName="com.example.TestApp.main_quiz_page"/>
+
+        <activity
+            android:name="com.example.TestApp.thinking_skills"
+            android:exported="false"
+            android:parentActivityName="com.example.TestApp.main_quiz_page"/>
+
+        <activity
+            android:name="com.example.TestApp.reading"
+            android:exported="false"
+            android:parentActivityName="com.example.TestApp.main_quiz_page"/>
+
+        <activity
+            android:name="com.example.TestApp.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

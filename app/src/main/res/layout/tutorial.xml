@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/texttitle"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="Quiz Instructions "
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/l"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="Firstly when on the home screen select the type of quiz you wish to take; Mathematical Reasoning, Thinking Skills or Reading. Once selected you will be displayed with a question and a place to answer. read the question and enter the answer. click the submit answer button and click next question. do this for all 5 questions and at the end you will be informed of your score and your test completion will be recorded "
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle=""
+        android:layout_below="@id/texttitle"/>
+
+</RelativeLayout>
