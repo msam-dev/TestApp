@@ -30,7 +30,7 @@ public static final String SEND_USERNAME = "LOGOUT";
         userInfo = intent.getStringExtra(SEND_USERNAME);
         if(userInfo.equals(logout) || userInfo == null){ //takes user back to home page if they are not logged in
             openHomeActivity_page();
-            System.out.println("ERRORs no login details");
+            Log.e("e","ERROR no login details");
         }
 
         TextView userView = (TextView)findViewById(R.id.textTitleHello);
@@ -78,7 +78,7 @@ public static final String SEND_USERNAME = "LOGOUT";
                 while(res.moveToNext()){
                     buffer.append(res.getInt(0)+") ");
                     buffer.append(res.getString(2)+ " ");
-                    buffer.append("score "+res.getString(3)+"/5"+"\n");
+                    buffer.append("-score "+res.getString(3)+"/5"+"\n");
                 }
                 AlertDialog.Builder builder = new AlertDialog.Builder(main_quiz_page.this);
                 builder.setCancelable(true);
@@ -122,11 +122,13 @@ public static final String SEND_USERNAME = "LOGOUT";
 
     public void openThink_page(){
         Intent intent = new Intent(this, thinking_skills.class);
+        intent.putExtra(thinking_skills.SEND_USERNAME, userInfo);
         startActivity(intent);
     }
 
     public void openRead_page(){
         Intent intent = new Intent(this, reading.class);
+        intent.putExtra(reading.SEND_USERNAME, userInfo);
         startActivity(intent);
     }
 }
