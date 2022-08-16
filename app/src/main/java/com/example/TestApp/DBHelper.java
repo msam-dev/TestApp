@@ -2,9 +2,11 @@ package com.example.TestApp;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DBHelper extends SQLiteOpenHelper {
 
@@ -49,27 +51,38 @@ public class DBHelper extends SQLiteOpenHelper {
         insertQuiz(9, "Mathematical Reasoning", "80+5", 85);
         insertQuiz(10, "Mathematical Reasoning", "4x8", 32);
 
-        insertQuiz(11, "Thinking Skills", "What colour is the sky", 1);
-        insertQuiz(12, "Thinking Skills", "Who is the PM of Australia", 2);
-        insertQuiz(13, "Thinking Skills", "How many wheels does a bicycle have", 3);
-        insertQuiz(14, "Thinking Skills", "What is a String in CS", 4);
-        insertQuiz(15, "Thinking Skills", "What is the capital of Australia", 1);
-        insertQuiz(16, "Thinking Skills", "What is the queen of the UKs first name", 2);
-        insertQuiz(17, "Thinking Skills", "What is the formula for water", 3);
-        insertQuiz(18, "Thinking Skills", "What colour is a ripe banana", 4);
-        insertQuiz(19, "Thinking Skills", "What animal is a russian blue", 1);
-        insertQuiz(20, "Thinking Skills", "How many millions in a billion", 2);
+        insertQuiz(11, "Mathematical Reasoning", "17+2", 19);
+        insertQuiz(12, "Mathematical Reasoning", "20+90", 110);
+        insertQuiz(13, "Mathematical Reasoning", "100/4", 25);
+        insertQuiz(14, "Mathematical Reasoning", "1000/100", 10);
+        insertQuiz(15, "Mathematical Reasoning", "15+20", 35);
+        insertQuiz(16, "Mathematical Reasoning", "7x3", 21);
+        insertQuiz(17, "Mathematical Reasoning", "6x6", 36);
+        insertQuiz(18, "Mathematical Reasoning", "93+10", 103);
+        insertQuiz(19, "Mathematical Reasoning", "16x8", 128);
+        insertQuiz(20, "Mathematical Reasoning", "500/20", 25);
 
-        insertQuiz(11, "Reading", "What does the word Triangle mean ", 1);
-        insertQuiz(12, "Reading", "What does the word Expand mean", 2);
-        insertQuiz(13, "Reading", "What does the word Piano mean", 3);
-        insertQuiz(14, "Reading", "What does the word Soldier mean", 4);
-        insertQuiz(15, "Reading", "What does the word Democracy mean", 1);
-        insertQuiz(16, "Reading", "What is the correct spelling of the fruit", 2);
-        insertQuiz(17, "Reading", "What is the correct spelling of the verb", 3);
-        insertQuiz(18, "Reading", "What is the correct spelling of the country", 4);
-        insertQuiz(19, "Reading", "What is the correct spelling of the flying vehicle", 1);
-        insertQuiz(20, "Reading", "What is the correct spelling of the country", 2);
+        insertQuiz(21, "Thinking Skills", "What colour is the sky", 1);
+        insertQuiz(22, "Thinking Skills", "Who is the PM of Australia", 2);
+        insertQuiz(23, "Thinking Skills", "How many wheels does a bicycle have", 3);
+        insertQuiz(24, "Thinking Skills", "What is a String in CS", 4);
+        insertQuiz(25, "Thinking Skills", "What is the capital of Australia", 1);
+        insertQuiz(26, "Thinking Skills", "What is the queen of the UKs first name", 2);
+        insertQuiz(27, "Thinking Skills", "What is the formula for water", 3);
+        insertQuiz(28, "Thinking Skills", "What colour is a ripe banana", 4);
+        insertQuiz(29, "Thinking Skills", "What animal is a russian blue", 1);
+        insertQuiz(30, "Thinking Skills", "How many millions in a billion", 2);
+
+        insertQuiz(31, "Reading", "What does the word Triangle mean ", 1);
+        insertQuiz(32, "Reading", "What does the word Expand mean", 2);
+        insertQuiz(33, "Reading", "What does the word Piano mean", 3);
+        insertQuiz(34, "Reading", "What does the word Soldier mean", 4);
+        insertQuiz(35, "Reading", "What does the word Democracy mean", 1);
+        insertQuiz(36, "Reading", "What is the correct spelling of the fruit", 2);
+        insertQuiz(37, "Reading", "What is the correct spelling of the verb", 3);
+        insertQuiz(38, "Reading", "What is the correct spelling of the country", 4);
+        insertQuiz(39, "Reading", "What is the correct spelling of the flying vehicle", 1);
+        insertQuiz(40, "Reading", "What is the correct spelling of the country", 2);
 
     }
 
@@ -110,13 +123,11 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase DB = this.getWritableDatabase();
         Cursor cursor = DB.query("Quiz",null,"quiznumber="+quizNumber, null,null,null,null);
         return cursor;
-
-
     }
 
-    public Cursor getQuizResults(){
+    public Cursor getQuizResults(String user){
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("Select * from Quizresults", null);
+        Cursor cursor = DB.rawQuery("Select * from Quizresults where username = ?", new String[]{user});
         return cursor;
     }
 
@@ -149,7 +160,6 @@ public class DBHelper extends SQLiteOpenHelper {
             cursor.moveToNext();
             return cursor.getInt(3);
         }
-
     }
 
     public Boolean addTotalScore(String username, int value){
@@ -176,5 +186,30 @@ public class DBHelper extends SQLiteOpenHelper {
             System.out.println(passwordUser+ " "+ PasswordLogin );
             return PasswordLogin.equals(passwordUser);
         }
+    }
+
+    public int getNewQuizAttemptNumber(String Username){
+        Log.e("s", "landed");
+        SQLiteDatabase DB = this.getReadableDatabase();
+        Cursor cursor = DB.rawQuery("Select MAX(resultNumber) from Quizresults where username = ?", new String[]{Username});
+        Log.e("s", "11111111111111111111");
+        if(cursor.getCount()==0){return 1;}
+        else{
+            cursor.moveToNext();
+            Log.e("s", "here");
+            int value = cursor.getInt(0);
+            return value;
+        }
+    }
+
+    public void updateQuizAttempt(int attemptNumber, String Username, String QuizType, int Score){
+        SQLiteDatabase DB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("resultnumber", attemptNumber);
+        contentValues.put("username", Username);
+        contentValues.put("quiztype", QuizType);
+        contentValues.put("correctanswers", Score);
+        DB.insert("Quizresults", null, contentValues);
+        Log.e("e", "sucess update");
     }
 }
