@@ -87,14 +87,13 @@ public class reading extends AppCompatActivity {
         }
     }
 
-
     protected void setQuestionContent(int pageNum, int qNum){
         questionContent = (TextView)findViewById(R.id.questionContent);
         Cursor cursor = DB.getSelectQuiz(qNum);
         String questionDetails ="";
         cursor.moveToNext();
         questionDetails = cursor.getString(2);
-        questionContent.setText(pageNum+1+") "+questionDetails);
+        questionContent.setText(questionDetails);
     }
 
     public void openHome_page(String UserInfo){

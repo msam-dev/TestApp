@@ -84,27 +84,26 @@ public class DBHelper extends SQLiteOpenHelper {
         insertQuiz(39, "Thinking Skills", "What animal is a corgi \n 1)dog \n 2)bird \n 3)fish \n 4)cat", 1);
         insertQuiz(40, "Thinking Skills", "How many sides does a pentagon have \n 1)Eight \n 2)Seven \n 3)Six \n 4)Five", 4);
 
-        insertQuiz(41, "Reading", "What does the word Triangle mean ", 1);
-        insertQuiz(42, "Reading", "What does the word Expand mean", 2);
-        insertQuiz(43, "Reading", "What does the word Piano mean", 3);
-        insertQuiz(44, "Reading", "What does the word Soldier mean", 4);
-        insertQuiz(45, "Reading", "What does the word Democracy mean", 1);
-        insertQuiz(46, "Reading", "What is the correct spelling of the fruit", 2);
-        insertQuiz(47, "Reading", "What is the correct spelling of the verb", 3);
-        insertQuiz(48, "Reading", "What is the correct spelling of the country", 4);
-        insertQuiz(49, "Reading", "What is the correct spelling of the flying vehicle", 1);
-        insertQuiz(50, "Reading", "What is the correct spelling of the country", 2);
-        insertQuiz(51, "Reading", "What does the word Triangle mean ", 1);
-
-        insertQuiz(52, "Reading", "What does the word Expand mean", 2);
-        insertQuiz(53, "Reading", "What does the word Piano mean", 3);
-        insertQuiz(54, "Reading", "What does the word Soldier mean", 4);
-        insertQuiz(55, "Reading", "What does the word Democracy mean", 1);
-        insertQuiz(56, "Reading", "What is the correct spelling of the fruit", 2);
-        insertQuiz(57, "Reading", "What is the correct spelling of the verb", 3);
-        insertQuiz(58, "Reading", "What is the correct spelling of the country", 4);
-        insertQuiz(59, "Reading", "What is the correct spelling of the flying vehicle", 1);
-        insertQuiz(60, "Reading", "What is the correct spelling of the country", 2);
+        insertQuiz(41, "Reading", "What does the word grotesque mean \n 1)very ugly \n 2)very beautiful \n 3)very large \n 4)very smart", 1);
+        insertQuiz(42, "Reading", "What does the word Expand mean \n 1)Decrease in size \n 2)Increase in size \n 3)Turn around \n 4)Move left", 2);
+        insertQuiz(43, "Reading", "What does the word Loud mean \n 1)Low Volume \n 2)Tall in stature \n 3)High Volume \n 4)cat", 3);
+        insertQuiz(44, "Reading", "What does the word opaque mean \n 1)transparent \n 2)shiny \n 3)special \n 4)non-transparent", 4);
+        insertQuiz(45, "Reading", "What does the word Shrink mean \n 1)Decrease in size \n 2)Increase in size \n 3)Turn around \n 4)Move left", 1);
+        insertQuiz(46, "Reading", "What is the correct spelling of the fruit \n 1)Bana \n 2)Banana \n 3)Bannana \n 4)Banaana", 2);
+        insertQuiz(47, "Reading", "What is the correct spelling of the country \n 1)Irane \n 2)Oran \n 3)Iran \n 4)Eran", 3);
+        insertQuiz(48, "Reading", "What is the correct spelling of the animal \n 1)hippopotamous \n 2)hippopotamuse \n 3)hippapotamouse \n 4)hippopotamus", 4);
+        insertQuiz(49, "Reading", "What is the correct spelling of the flying vehicle \n 1)Plane \n 2)Plain \n 3)Plein \n 4)Plaine", 1);
+        insertQuiz(50, "Reading", "What is the correct spelling of the country \n 1)Australiar \n 2)Australia \n 3)Autsralia \n 4)Austrelia", 2);
+        insertQuiz(51, "Reading", "What does the word Triangle mean \n 1)3 sided shape \n 2)2 sided shape \n 3)8 sided shape \n 4)4 sided shape", 1);
+        insertQuiz(52, "Reading", "What does the word Stupendous mean \n 1)very stupid \n 2)very impressive \n 3)very small \n 4)very awfull", 2);
+        insertQuiz(53, "Reading", "What does the word Rapid mean \n 1)very orderly \n 2)very slow \n 3)very fast \n 4)very good", 3);
+        insertQuiz(54, "Reading", "What does the word Scrawny mean \n 1)very fat \n 2)very athletic \n 3)very strong \n 4)very skinny", 4);
+        insertQuiz(55, "Reading", "What does the word Error mean \n 1)a mistake \n 2)a success \n 3)happy \n 4)very lucky", 1);
+        insertQuiz(56, "Reading", "What is the correct spelling of the vegetable \n 1)brockoli \n 2)broccoli \n 3)brokkoli \n 4)broccoly", 2);
+        insertQuiz(57, "Reading", "What is the correct spelling of the vegetable \n 1)bock choi \n 2)bock choy \n 3)bok choy \n 4)bok choi", 3);
+        insertQuiz(58, "Reading", "What is the correct spelling of the country \n 1)Zimbabwee \n 2)Zimabwe \n 3)Zimmbabway \n 4)Zimbabwe", 4);
+        insertQuiz(59, "Reading", "What is the correct spelling of the vehicle \n 1)Bicycle \n 2)Bycycle \n 3)Bicicle \n 4)Bicycel", 1);
+        insertQuiz(60, "Reading", "What is the correct spelling of the country \n 1)Madakascar \n 2)Madagascar \n 3)Madegascar \n 4)Madigascar", 2);
 
     }
 
