@@ -63,27 +63,26 @@ public class DBHelper extends SQLiteOpenHelper {
         insertQuiz(19, "Mathematical Reasoning", "16x8", 128);
         insertQuiz(20, "Mathematical Reasoning", "500/20", 25);
 
-        insertQuiz(21, "Thinking Skills", "What colour is the sky", 1);
-        insertQuiz(22, "Thinking Skills", "Who is the PM of Australia", 2);
-        insertQuiz(23, "Thinking Skills", "How many wheels does a tricycle have", 3);
-        insertQuiz(24, "Thinking Skills", "What is a String in CS", 4);
-        insertQuiz(25, "Thinking Skills", "What is the capital of Australia", 1);
+        insertQuiz(21, "Thinking Skills", "What colour is the sky \n 1)blue \n 2)yellow \n 3)green \n 4)maroon", 1);
+        insertQuiz(22, "Thinking Skills", "Who is the PM of Australia \n 1)Morrison \n 2)Albanese \n 3)Turnbull \n 4)Rudd", 2);
+        insertQuiz(23, "Thinking Skills", "How many wheels does a tricycle have \n 1)Four \n 2)One \n 3)Three \n 4)Two", 3);
+        insertQuiz(24, "Thinking Skills", "What is a int in CS \n 1)word \n 2)decimal \n 3)letter \n 4)whole number", 4);
+        insertQuiz(25, "Thinking Skills", "What is the capital of Australia \n 1)Canberra \n 2)Sydney \n 3)Melbourne \n 4)Perth", 1);
         insertQuiz(26, "Thinking Skills", "What is the queen of the UKs first name \n 1)Mary  \n 2)Elizabeth  \n 3)Victoria \n 4)Rose", 2);
-        insertQuiz(27, "Thinking Skills", "What is the formula for water", 3);
-        insertQuiz(28, "Thinking Skills", "What colour is a ripe banana", 4);
-        insertQuiz(29, "Thinking Skills", "What animal is a russian blue", 1);
-        insertQuiz(30, "Thinking Skills", "How many millions in a billion", 2);
-
-        insertQuiz(31, "Thinking Skills", "What colour is the sky", 1);
-        insertQuiz(32, "Thinking Skills", "Who is the PM of Australia", 2);
-        insertQuiz(33, "Thinking Skills", "How many wheels does a bicycle have", 3);
-        insertQuiz(34, "Thinking Skills", "What is a String in CS", 4);
-        insertQuiz(35, "Thinking Skills", "What is the capital of Australia", 1);
-        insertQuiz(36, "Thinking Skills", "What is the queen of the UKs first name", 2);
-        insertQuiz(37, "Thinking Skills", "What is the formula for water", 3);
-        insertQuiz(38, "Thinking Skills", "What colour is a ripe banana", 4);
-        insertQuiz(39, "Thinking Skills", "What animal is a russian blue", 1);
-        insertQuiz(40, "Thinking Skills", "How many millions in a billion", 2);
+        insertQuiz(27, "Thinking Skills", "What is the formula for water \n 1)CO2 \n 2)HO2 \n 3)H2O \n 4)H2O2", 3);
+        insertQuiz(28, "Thinking Skills", "What colour is a ripe banana \n 1)blue \n 2)red \n 3)pink \n 4)yellow", 4);
+        insertQuiz(29, "Thinking Skills", "What animal is a russian blue \n 1)cat \n 2)dog \n 3)sheep \n 4)bear", 1);
+        insertQuiz(30, "Thinking Skills", "How many millions in a billion \n 1)10 \n 2)100 \n 3)1000 \n 4)10000", 3);
+        insertQuiz(31, "Thinking Skills", "What colour pigment was made from snail shells \n 1)green \n 2)yellow \n 3)purple \n 4)blue", 3);
+        insertQuiz(32, "Thinking Skills", "Who is the US President \n 1)Obama \n 2)Bush \n 3)Trump \n 4)Biden", 4);
+        insertQuiz(33, "Thinking Skills", "How many wheels does a bicycle have \n 1)Three \n 2)Two \n 3)Four \n 4)One", 3);
+        insertQuiz(34, "Thinking Skills", "How old are the pyramids of Giza \n 1)500yr \n 2)20000yr \n 3)1000yr \n 4)4500yr", 4);
+        insertQuiz(35, "Thinking Skills", "What is the capital of Japan \n 1)Tokyo \n 2)Osaka \n 3)Nagasaki \n 4)Saga", 1);
+        insertQuiz(36, "Thinking Skills", "What is the capital of China \n 1)Shanghai \n 2)Beijing \n 3)Shenzhen \n 4)Wuhan", 2);
+        insertQuiz(37, "Thinking Skills", "What is the formula for Carbon dioxide \n 1)CO \n 2)C2O \n 3)CO2 \n 4)C202", 3);
+        insertQuiz(38, "Thinking Skills", "How many sides does a heptagon have \n 1)Eleven \n 2)Seven \n 3)Eight \n 4)Nine", 2);
+        insertQuiz(39, "Thinking Skills", "What animal is a corgi \n 1)dog \n 2)bird \n 3)fish \n 4)cat", 1);
+        insertQuiz(40, "Thinking Skills", "How many sides does a pentagon have \n 1)Eight \n 2)Seven \n 3)Six \n 4)Five", 4);
 
         insertQuiz(41, "Reading", "What does the word Triangle mean ", 1);
         insertQuiz(42, "Reading", "What does the word Expand mean", 2);

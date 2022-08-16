@@ -115,7 +115,7 @@ public class thinking_skills extends AppCompatActivity {
 
     public int randomNumber(){
         int value = (int)Math.round(Math.random()*20+20);
-        if(value ==0){
+        if(value ==0 || value ==20){
             value =randomNumber();
         }
         return value;

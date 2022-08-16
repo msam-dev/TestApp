@@ -118,7 +118,7 @@ public class reading extends AppCompatActivity {
 
     public int randomNumber(){
         int value = (int)Math.round(Math.random()*20+40);
-        if(value ==0){
+        if(value ==0 || value ==40){
             value =randomNumber();
         }
         return value;
